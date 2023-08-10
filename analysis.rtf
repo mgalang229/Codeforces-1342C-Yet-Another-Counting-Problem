@@ -1,0 +1,750 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fswiss\fcharset0 Helvetica-Oblique;
+\f3\fswiss\fcharset0 Helvetica-BoldOblique;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww21600\viewh15380\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs48 \cf0 \
+goal:\
+count integers x such that l[i] <= x <= r[i] (inclusive)\
+where ((x mod a) mod b) != ((x mod b) mod a)\
+\
+output is space-separated\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+4 6 5 \
+1 1 \
+1 3\
+1 5\
+1 7 \
+1 9\
+\
+
+\f1\b 1 1
+\f0\b0 \
+1 mod 4 mod 6 = 1\
+1 mod 6 mod 4 = 1\
+= 0\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2\i \cf0 *x <= max(a, b) aren\'92t valid*
+\f0\i0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\b \cf0 1 3
+\f0\b0 \
+same\
+= 0\
+\
+
+\f1\b 1 5
+\f0\b0 \
+same\
+= 0\
+\
+
+\f1\b 1 7
+\f0\b0 \
+6 mod 4 mod 6 = 2\
+6 mod 6 mod 4 = 0\
+\
+7 mod 4 mod 6 = 3\
+7 mod 6 mod 4 = 1\
+= 2\
+\
+
+\f1\b 1 9
+\f0\b0 \
+6 (works)\
+7 (works)\
+\
+8 mod 4 mod 6 = 0\
+8 mod 6 mod 4 = 2\
+\
+9 mod 4 mod 6 = 5\
+9 mod 6 mod 4 = 3\
+= 4\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+1\
+7 10 2\
+7 8 \
+100 220\
+\
+
+\f1\b 7 8
+\f0\b0 \
+7 mod 7 mod 10 = 0\
+7 mod 10 mod 7 = 0\
+\
+8 mod 7 mod 10 = 1\
+8 mod 10 mod 7 = 1\
+= 0\
+\
+
+\f1\b 100 200
+\f0\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\fs50 \cf2 100:\
+100 mod 7 mod 10 = 2\
+100 mod 10 mod 7 = 0\
+counted\
+\
+101:\
+101 mod 7 mod 10 = 3\
+101 mod 10 mod 7 = 1\
+counted\
+\
+102:\
+102 mod 7 mod 10 = 4\
+102 mod 10 mod 7 = 2\
+counted\
+\
+103:\
+103 mod 7 mod 10 = 5\
+103 mod 10 mod 7 = 3\
+counted\
+\
+104:\
+104 mod 7 mod 10 = 6\
+104 mod 10 mod 7 = 4\
+counted\
+\
+105:\
+105 mod 7 mod 10 = 0\
+105 mod 10 mod 7 = 5\
+counted\
+\
+106:\
+106 mod 7 mod 10 = 1\
+106 mod 10 mod 7 = 6\
+counted\
+\
+107:\
+107 mod 7 mod 10 = 2\
+107 mod 10 mod 7 = 0\
+counted\
+\
+108:\
+108 mod 7 mod 10 = 3\
+108 mod 10 mod 7 = 1\
+counted\
+\
+109:\
+109 mod 7 mod 10 = 4\
+109 mod 10 mod 7 = 2\
+counted\
+\
+110:\
+110 mod 7 mod 10 = 5\
+110 mod 10 mod 7 = 0\
+counted\
+\
+111:\
+111 mod 7 mod 10 = 6\
+111 mod 10 mod 7 = 1\
+counted\
+\
+112:\
+112 mod 7 mod 10 = 0\
+112 mod 10 mod 7 = 2\
+counted\
+\
+113:\
+113 mod 7 mod 10 = 1\
+113 mod 10 mod 7 = 3\
+counted\
+\
+114:\
+114 mod 7 mod 10 = 2\
+114 mod 10 mod 7 = 4\
+counted\
+\
+115:\
+115 mod 7 mod 10 = 3\
+115 mod 10 mod 7 = 5\
+counted\
+\
+116:\
+116 mod 7 mod 10 = 4\
+116 mod 10 mod 7 = 6\
+counted\
+\
+117:\
+117 mod 7 mod 10 = 5\
+117 mod 10 mod 7 = 0\
+counted\
+\
+118:\
+118 mod 7 mod 10 = 6\
+118 mod 10 mod 7 = 1\
+counted\
+\
+119:\
+119 mod 7 mod 10 = 0\
+119 mod 10 mod 7 = 2\
+counted\
+\
+120:\
+120 mod 7 mod 10 = 1\
+120 mod 10 mod 7 = 0\
+counted\
+\
+121:\
+121 mod 7 mod 10 = 2\
+121 mod 10 mod 7 = 1\
+counted\
+\
+122:\
+122 mod 7 mod 10 = 3\
+122 mod 10 mod 7 = 2\
+counted\
+\
+123:\
+123 mod 7 mod 10 = 4\
+123 mod 10 mod 7 = 3\
+counted\
+\
+124:\
+124 mod 7 mod 10 = 5\
+124 mod 10 mod 7 = 4\
+counted\
+\
+125:\
+125 mod 7 mod 10 = 6\
+125 mod 10 mod 7 = 5\
+counted\
+\
+126:\
+126 mod 7 mod 10 = 0\
+126 mod 10 mod 7 = 6\
+counted\
+\
+127:\
+127 mod 7 mod 10 = 1\
+127 mod 10 mod 7 = 0\
+counted\
+\
+128:\
+128 mod 7 mod 10 = 2\
+128 mod 10 mod 7 = 1\
+counted\
+\
+129:\
+129 mod 7 mod 10 = 3\
+129 mod 10 mod 7 = 2\
+counted\
+\
+130:\
+130 mod 7 mod 10 = 4\
+130 mod 10 mod 7 = 0\
+counted\
+\
+131:\
+131 mod 7 mod 10 = 5\
+131 mod 10 mod 7 = 1\
+counted\
+\
+132:\
+132 mod 7 mod 10 = 6\
+132 mod 10 mod 7 = 2\
+counted\
+\
+133:\
+133 mod 7 mod 10 = 0\
+133 mod 10 mod 7 = 3\
+counted\
+\
+134:\
+134 mod 7 mod 10 = 1\
+134 mod 10 mod 7 = 4\
+counted\
+\
+135:\
+135 mod 7 mod 10 = 2\
+135 mod 10 mod 7 = 5\
+counted\
+\
+136:\
+136 mod 7 mod 10 = 3\
+136 mod 10 mod 7 = 6\
+counted\
+\
+137:\
+137 mod 7 mod 10 = 4\
+137 mod 10 mod 7 = 0\
+counted\
+\
+138:\
+138 mod 7 mod 10 = 5\
+138 mod 10 mod 7 = 1\
+counted\
+\
+139:\
+139 mod 7 mod 10 = 6\
+139 mod 10 mod 7 = 2\
+counted\
+\
+
+\f1\b >>>>>> computation <<<<<<\
+\
+
+\f3\i *edge-case: consider the offset if l[i] is part of a not counted segment*
+\f1\i0 \
+
+\f0\b0 \
+
+\f1\b startFactor = ceil(l[i] / LCM(a, b))\
+lastSegmentStartFactor = r[i] / LCM(a, b)\
+\
+let notCounted = 0\
+if l[i] <= min(a, b),\
+	notCounted = notCounted + min(a, b) - l[i]\
+	startFactor -= 1\
+\
+notCounted = notCounted + ((lastSegmentStartFactor - 1) - startFactor + 1) * max(a, b)\
+notCounted = notCounted + min(max(a, b), r[i] - LCM(a, b) * lastSegmentStartFactor)\
+\
+ans += r[i] - l[i] + 1 - notCounted
+\f0\b0 \
+\
+140:\
+140 mod 7 mod 10 = 0\
+140 mod 10 mod 7 = 0\
+not counted\
+\
+
+\f1\b x = LCM(a, b)\
+multiples of LCM(a, b) => LCM(7, 10) = 70, thus, 70, 140, 210, \'85
+\f0\b0 \
+\
+141:\
+141 mod 7 mod 10 = 1\
+141 mod 10 mod 7 = 1\
+not counted\
+\
+142:\
+142 mod 7 mod 10 = 2\
+142 mod 10 mod 7 = 2\
+not counted\
+\
+143:\
+143 mod 7 mod 10 = 3\
+143 mod 10 mod 7 = 3\
+not counted\
+\
+144:\
+144 mod 7 mod 10 = 4\
+144 mod 10 mod 7 = 4\
+not counted\
+\
+145:\
+145 mod 7 mod 10 = 5\
+145 mod 10 mod 7 = 5\
+not counted\
+\
+146:\
+146 mod 7 mod 10 = 6\
+146 mod 10 mod 7 = 6\
+not counted\
+\
+147:\
+147 mod 7 mod 10 = 0\
+147 mod 10 mod 7 = 0\
+not counted\
+\
+148:\
+148 mod 7 mod 10 = 1\
+148 mod 10 mod 7 = 1\
+not counted\
+\
+149:\
+149 mod 7 mod 10 = 2\
+149 mod 10 mod 7 = 2\
+not counted\
+\
+
+\f3\i\b *starting from where x is divisible by both a and b, the length is max(a, b)*\
+*edge-case: if l = 1, then the length is max(a, b) - 1 (assuming r is >= max(a, b))*
+\f0\i0\b0 \
+\
+150:\
+150 mod 7 mod 10 = 3\
+150 mod 10 mod 7 = 0\
+counted\
+\
+151:\
+151 mod 7 mod 10 = 4\
+151 mod 10 mod 7 = 1\
+counted\
+\
+152:\
+152 mod 7 mod 10 = 5\
+152 mod 10 mod 7 = 2\
+counted\
+\
+153:\
+153 mod 7 mod 10 = 6\
+153 mod 10 mod 7 = 3\
+counted\
+\
+154:\
+154 mod 7 mod 10 = 0\
+154 mod 10 mod 7 = 4\
+counted\
+\
+155:\
+155 mod 7 mod 10 = 1\
+155 mod 10 mod 7 = 5\
+counted\
+\
+156:\
+156 mod 7 mod 10 = 2\
+156 mod 10 mod 7 = 6\
+counted\
+\
+157:\
+157 mod 7 mod 10 = 3\
+157 mod 10 mod 7 = 0\
+counted\
+\
+158:\
+158 mod 7 mod 10 = 4\
+158 mod 10 mod 7 = 1\
+counted\
+\
+159:\
+159 mod 7 mod 10 = 5\
+159 mod 10 mod 7 = 2\
+counted\
+\
+160:\
+160 mod 7 mod 10 = 6\
+160 mod 10 mod 7 = 0\
+counted\
+\
+161:\
+161 mod 7 mod 10 = 0\
+161 mod 10 mod 7 = 1\
+counted\
+\
+162:\
+162 mod 7 mod 10 = 1\
+162 mod 10 mod 7 = 2\
+counted\
+\
+163:\
+163 mod 7 mod 10 = 2\
+163 mod 10 mod 7 = 3\
+counted\
+\
+164:\
+164 mod 7 mod 10 = 3\
+164 mod 10 mod 7 = 4\
+counted\
+\
+165:\
+165 mod 7 mod 10 = 4\
+165 mod 10 mod 7 = 5\
+counted\
+\
+166:\
+166 mod 7 mod 10 = 5\
+166 mod 10 mod 7 = 6\
+counted\
+\
+167:\
+167 mod 7 mod 10 = 6\
+167 mod 10 mod 7 = 0\
+counted\
+\
+168:\
+168 mod 7 mod 10 = 0\
+168 mod 10 mod 7 = 1\
+counted\
+\
+169:\
+169 mod 7 mod 10 = 1\
+169 mod 10 mod 7 = 2\
+counted\
+\
+170:\
+170 mod 7 mod 10 = 2\
+170 mod 10 mod 7 = 0\
+counted\
+\
+171:\
+171 mod 7 mod 10 = 3\
+171 mod 10 mod 7 = 1\
+counted\
+\
+172:\
+172 mod 7 mod 10 = 4\
+172 mod 10 mod 7 = 2\
+counted\
+\
+173:\
+173 mod 7 mod 10 = 5\
+173 mod 10 mod 7 = 3\
+counted\
+\
+174:\
+174 mod 7 mod 10 = 6\
+174 mod 10 mod 7 = 4\
+counted\
+\
+175:\
+175 mod 7 mod 10 = 0\
+175 mod 10 mod 7 = 5\
+counted\
+\
+176:\
+176 mod 7 mod 10 = 1\
+176 mod 10 mod 7 = 6\
+counted\
+\
+177:\
+177 mod 7 mod 10 = 2\
+177 mod 10 mod 7 = 0\
+counted\
+\
+178:\
+178 mod 7 mod 10 = 3\
+178 mod 10 mod 7 = 1\
+counted\
+\
+179:\
+179 mod 7 mod 10 = 4\
+179 mod 10 mod 7 = 2\
+counted\
+\
+180:\
+180 mod 7 mod 10 = 5\
+180 mod 10 mod 7 = 0\
+counted\
+\
+181:\
+181 mod 7 mod 10 = 6\
+181 mod 10 mod 7 = 1\
+counted\
+\
+182:\
+182 mod 7 mod 10 = 0\
+182 mod 10 mod 7 = 2\
+counted\
+\
+183:\
+183 mod 7 mod 10 = 1\
+183 mod 10 mod 7 = 3\
+counted\
+\
+184:\
+184 mod 7 mod 10 = 2\
+184 mod 10 mod 7 = 4\
+counted\
+\
+185:\
+185 mod 7 mod 10 = 3\
+185 mod 10 mod 7 = 5\
+counted\
+\
+186:\
+186 mod 7 mod 10 = 4\
+186 mod 10 mod 7 = 6\
+counted\
+\
+187:\
+187 mod 7 mod 10 = 5\
+187 mod 10 mod 7 = 0\
+counted\
+\
+188:\
+188 mod 7 mod 10 = 6\
+188 mod 10 mod 7 = 1\
+counted\
+\
+189:\
+189 mod 7 mod 10 = 0\
+189 mod 10 mod 7 = 2\
+counted\
+\
+190:\
+190 mod 7 mod 10 = 1\
+190 mod 10 mod 7 = 0\
+counted\
+\
+191:\
+191 mod 7 mod 10 = 2\
+191 mod 10 mod 7 = 1\
+counted\
+\
+192:\
+192 mod 7 mod 10 = 3\
+192 mod 10 mod 7 = 2\
+counted\
+\
+193:\
+193 mod 7 mod 10 = 4\
+193 mod 10 mod 7 = 3\
+counted\
+\
+194:\
+194 mod 7 mod 10 = 5\
+194 mod 10 mod 7 = 4\
+counted\
+\
+195:\
+195 mod 7 mod 10 = 6\
+195 mod 10 mod 7 = 5\
+counted\
+\
+196:\
+196 mod 7 mod 10 = 0\
+196 mod 10 mod 7 = 6\
+counted\
+\
+197:\
+197 mod 7 mod 10 = 1\
+197 mod 10 mod 7 = 0\
+counted\
+\
+198:\
+198 mod 7 mod 10 = 2\
+198 mod 10 mod 7 = 1\
+counted\
+\
+199:\
+199 mod 7 mod 10 = 3\
+199 mod 10 mod 7 = 2\
+counted\
+\
+200:\
+200 mod 7 mod 10 = 4\
+200 mod 10 mod 7 = 0\
+counted\
+\
+201:\
+201 mod 7 mod 10 = 5\
+201 mod 10 mod 7 = 1\
+counted\
+\
+202:\
+202 mod 7 mod 10 = 6\
+202 mod 10 mod 7 = 2\
+counted\
+\
+203:\
+203 mod 7 mod 10 = 0\
+203 mod 10 mod 7 = 3\
+counted\
+\
+204:\
+204 mod 7 mod 10 = 1\
+204 mod 10 mod 7 = 4\
+counted\
+\
+205:\
+205 mod 7 mod 10 = 2\
+205 mod 10 mod 7 = 5\
+counted\
+\
+206:\
+206 mod 7 mod 10 = 3\
+206 mod 10 mod 7 = 6\
+counted\
+\
+207:\
+207 mod 7 mod 10 = 4\
+207 mod 10 mod 7 = 0\
+counted\
+\
+208:\
+208 mod 7 mod 10 = 5\
+208 mod 10 mod 7 = 1\
+counted\
+\
+209:\
+209 mod 7 mod 10 = 6\
+209 mod 10 mod 7 = 2\
+counted\
+\
+
+\f1\b >>>>> start segment <<<<<<\
+
+\f0\b0 \
+210:\
+210 mod 7 mod 10 = 0\
+210 mod 10 mod 7 = 0\
+not counted\
+\
+211:\
+211 mod 7 mod 10 = 1\
+211 mod 10 mod 7 = 1\
+not counted\
+\
+212:\
+212 mod 7 mod 10 = 2\
+212 mod 10 mod 7 = 2\
+not counted\
+\
+213:\
+213 mod 7 mod 10 = 3\
+213 mod 10 mod 7 = 3\
+not counted\
+\
+214:\
+214 mod 7 mod 10 = 4\
+214 mod 10 mod 7 = 4\
+not counted\
+\
+215:\
+215 mod 7 mod 10 = 5\
+215 mod 10 mod 7 = 5\
+not counted\
+\
+216:\
+216 mod 7 mod 10 = 6\
+216 mod 10 mod 7 = 6\
+not counted\
+\
+217:\
+217 mod 7 mod 10 = 0\
+217 mod 10 mod 7 = 0\
+not counted\
+\
+218:\
+218 mod 7 mod 10 = 1\
+218 mod 10 mod 7 = 1\
+not counted\
+\
+219:\
+219 mod 7 mod 10 = 2\
+219 mod 10 mod 7 = 2\
+not counted\
+\
+
+\f1\b >>>>> end segment <<<<<<
+\f0\b0 \
+\
+220:\
+220 mod 7 mod 10 = 3\
+220 mod 10 mod 7 = 0\
+counted\
+\
+ans = 101\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf2 \
+\
+\
+\
+\
+\
+\
+}
